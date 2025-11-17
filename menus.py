@@ -20,9 +20,6 @@ def menu1():
     choice = input(colored(get_translation("choice"), "magenta"))
     return choice
 
-menu1()
-
-
 def get_user_menu():
     clear()
     box = f"""
@@ -41,7 +38,6 @@ def get_user_menu():
     choice = input(colored(get_translation("choice"), "magenta"))
     return choice
 
-get_user_menu()
 
 def get_admin_menu():
     box = f"""
@@ -57,3 +53,11 @@ def get_admin_menu():
 6️⃣. Chiqish""", 'yellow'))
     choice = input(colored(get_translation("choice"), "magenta"))
     return choice
+
+def control_club_menu():
+    box = f"""
++--------------------------+
+|     Klub boshqaruvi      |
++--------------------------+
+"""
+    print()

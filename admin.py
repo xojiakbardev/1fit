@@ -6,6 +6,10 @@ from menus import *
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+def control_club():
+    
+
+
 def main():
     print(colored("""
 ╔══════════════════════════════════╗
@@ -19,18 +23,14 @@ def main():
         case '1':
             print('klublar boshqaruvi')
         case '2':
-            print()
+            print("Mashg‘ulotlar boshqaruvi")
         case '3':
-            print('klublar boshqaruvi')
+            print('Foydalanuvchilar bo‘limi')
         case '4':
-            print()
+            print("Statistika")
         case '5':
-            print('klublar boshqaruvi')
-        case '6':
-            print()
+            print('chiqish')
         case _:
             print()
        
-
-
 main()
