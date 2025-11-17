@@ -38,6 +38,22 @@ def get_user_menu():
 4️⃣. Obuna
 5️⃣. Statiska
 6️⃣. Chiqish""", 'yellow'))
+    choice = input(colored(get_translation("choice"), "magenta"))
+    return choice
 
 get_user_menu()
 
+def get_admin_menu():
+    box = f"""
++----------------+
+|     Menu       |
++----------------+
+"""
+    print(colored("""1️⃣. Klublar
+2️⃣. Klublar boshqaruvi
+3️⃣. Mashg'ulotlar boshqaruvi
+4️⃣. Foydalanuvchilar
+5️⃣. Statiska
+6️⃣. Chiqish""", 'yellow'))
+    choice = input(colored(get_translation("choice"), "magenta"))
+    return choice

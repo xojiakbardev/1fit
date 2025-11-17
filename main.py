@@ -60,7 +60,6 @@ def main():
                     return
                 case _:
                     print(colored(get_translation("invalid_choice"), "red"))
-
         else:
             clear()
 
