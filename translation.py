@@ -1,4 +1,7 @@
 
+from termcolor import colored
+
+
 translations = {
     "en": {
         "welcome": "Welcome to ONE FIT SYSTEM!",
@@ -69,3 +72,11 @@ def get_translation(key):
 def set_language(language):
     global selected_language
     selected_language = language
+
+def print_select_language():
+    print(colored("Select language / Tilni tanlang / Выберите язык:", 'green', attrs=['bold']))
+    print(colored('1. English', 'yellow'))
+    print(colored("2. O‘zbekcha", 'yellow'))
+    print(colored("3. Русский", 'yellow'))
+    print()
+    lang_choice = input("Your choice: ")
