@@ -2,7 +2,7 @@ import os
 from termcolor import colored
 
 from translation import *
-from user_menu import *
+from menus import *
 
 
 def clear():
@@ -63,7 +63,7 @@ def main():
 
         else:
             clear()
-            
+
 
             
 main()
