@@ -6,8 +6,14 @@ from translation import *
 def clear(): os.system('cls' if os.name == 'nt' else 'clear')
 
 
+def banner():
+    print(colored("""
+╔══════════════════════════════════╗
+║         💪 ONEFIT 💪      ║
+╚══════════════════════════════════╝
+    """, "green", attrs=["bold"]))
 
-def menu1():
+def main_menu():
     box = f"""
 +------------------------+
 |     Kirish usuli       |
@@ -45,19 +51,43 @@ def get_admin_menu():
 |     Menu       |
 +----------------+
 """
-    print(colored("""1️⃣. Klublar
-2️⃣. Klublar boshqaruvi
-3️⃣. Mashg'ulotlar boshqaruvi
-4️⃣. Foydalanuvchilar
-5️⃣. Statiska
-6️⃣. Chiqish""", 'yellow'))
+    print(colored("""1️⃣. Klublar boshqaruvi
+2️⃣. Mashg'ulotlar boshqaruvi
+3️⃣. Foydalanuvchilar
+4️⃣. Statiska
+5️⃣. Chiqish""", 'yellow'))
     choice = input(colored(get_translation("choice"), "magenta"))
     return choice
 
-def control_club_menu():
+def club_management_menu():
     box = f"""
 +--------------------------+
 |     Klub boshqaruvi      |
 +--------------------------+
 """
-    print()
+    print(colored(box, 'green'))
+    print(colored("""1️⃣. Klublar ro'yhati
+2️⃣. Yangi klub qo'shish
+3️⃣. Klub o'chirish
+4️⃣. Klub ma'lumotlarini tahrirlash
+5️⃣. Statiska
+6️⃣. Chiqish""", 'yellow'))
+    choice = input(colored(get_translation("choice"), "magenta"))
+    return choice
+    
+
+def training_management_menu():
+    box = f"""
++-----------------------------------+
+|     Mashg'ulotlar boshqaruvi      |
++-----------------------------------+
+"""
+    print(colored(box, 'green'))
+    print(colored("""1️⃣. Yangi mashg'ulot qo'shish
+2️⃣. Mashg'ulot o'chirish
+3️⃣. Ortga qaytish
+""", 'yellow'))
+    choice = input(colored(get_translation("choice"), "magenta"))
+    return choice
+    
+    

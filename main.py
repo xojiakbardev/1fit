@@ -9,13 +9,6 @@ def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
-def banner():
-    print(colored("""
-╔══════════════════════════════════╗
-║         💪 ONEFIT 💪      ║
-╚══════════════════════════════════╝
-    """, "green", attrs=["bold"]))
-
 def main():
     clear()
     banner()
@@ -43,13 +36,10 @@ def main():
             print("Invalid choice, defaulting to English.")
             set_language('en')
 
-
-    
     while True:
         if not user_data:
             clear()
-            choice = menu1()
-
+            choice = main_menu()
             match choice:
                 case '1':
                     print('register')
@@ -64,8 +54,4 @@ def main():
             clear()
 
 
-            
 main()
-
-
-
