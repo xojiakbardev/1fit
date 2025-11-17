@@ -1,4 +1,3 @@
-# translations.py
 
 translations = {
     "en": {
