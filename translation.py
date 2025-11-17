@@ -79,4 +79,7 @@ def print_select_language():
     print(colored("2. O‘zbekcha", 'yellow'))
     print(colored("3. Русский", 'yellow'))
     print()
-    lang_choice = input("Your choice: ")
+    lang_choice = input(colored("Your choice: ", 'cyan',
+                        attrs=['bold', 'underline']))
+    return lang_choice
+
