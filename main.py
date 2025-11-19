@@ -3,6 +3,7 @@ from termcolor import colored
 
 from translation import *
 from menus import *
+from auth import *
 
 
 def clear():
@@ -42,9 +43,9 @@ def main():
             choice = main_menu()
             match choice:
                 case '1':
-                    print('register')
+                    register_user()
                 case '2':
-                    print('login')
+                    login_user()
                 case '3':
                     print(colored(get_translation("goodbye"), "red"))
                     return
