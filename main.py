@@ -1,58 +1,35 @@
-import os
+from user import user_menu
+from admin import admin_menu
 from termcolor import colored
-
-from translation import *
-from menus import *
-from auth import *
+from superuser import superuser_menu
+from utils import clear_console, draw_box
 
 
-def clear():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-
-def main():
-    clear()
-    banner()
-
-    user_data = None
-    language_choice = print_select_language()
-    if language_choice == '1':
-        set_language('en')
-    elif language_choice == '2':
-        set_language('uz')
-    elif language_choice == '3':
-        set_language('ru')
-    else:
-        print("Invalid choice, defaulting to English.")
-        set_language('en')
-
-    match language_choice:
-        case '1':
-            set_language('en')
-        case '2':
-            set_language('uz')
-        case '3':
-            set_language('ru')
-        case _:
-            print("Invalid choice, defaulting to English.")
-            set_language('en')
-
+def main_menu():
     while True:
-        if not user_data:
-            clear()
-            choice = main_menu()
-            match choice:
-                case '1':
-                    register_user()
-                case '2':
-                    login_user()
-                case '3':
-                    print(colored(get_translation("goodbye"), "red"))
-                    return
-                case _:
-                    print(colored(get_translation("invalid_choice"), "red"))
-        else:
-            clear()
+        draw_box("SPORT KLUBI TIZIMI", "cyan")
+        print(colored("\n1. Foydalanuvchi", "yellow"))
+        print(colored("2. Admin", "yellow"))
+        print(colored("3. Chiqish", "red"))
+        print(colored("0. Superuser (yashirin)", "magenta"))
+
+        choice = input(colored("\nTanlang: ", "green"))
+
+        match choice:
+            case "1":
+                clear_console()
+                user_menu()
+            case "2":
+                clear_console()
+                admin_menu()
+            case "3":
+                clear_console()
+                print(colored("\n✅ Xayr!", "green"))
+                break
+            case "0":
+                clear_console()
+                superuser_menu()
 
 
-main()
+if __name__ == "__main__":
+    main_menu()

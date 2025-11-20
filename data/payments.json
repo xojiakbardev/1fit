@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "user_id": 3,
+    "club_id": 1,
+    "plan": 3,
+    "price": 850000,
+    "discount": 5,
+    "payment": 807500,
+    "credit_card": "121212121212121",
+    "phone": "+998773067067"
+  },
+  {
+    "id": 2,
+    "user_id": 4,
+    "club_id": 1,
+    "plan": 6,
+    "price": 1600000,
+    "discount": 10,
+    "payment": 1440000,
+    "credit_card": "121212",
+    "phone": "121212"
+  }
+]

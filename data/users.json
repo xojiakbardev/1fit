@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "full_name": "Abduboriy Abdusamadov",
+    "login": "abduboriy",
+    "password": "qwerty",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "full_name": "Nasriddinov Xojiakbar",
+    "login": "xojiakbar",
+    "password": "qwerty",
+    "city": "Toshkent",
+    "region": "Sergili",
+    "role": "user",
+    "month": 11,
+    "year": 2025,
+    "day": 19
+  },
+  {
+    "id": 3,
+    "full_name": "Ummataliyev Anasxon",
+    "login": "anasxon",
+    "password": "qwerty",
+    "city": "Toshkent",
+    "region": "Sergili",
+    "role": "user",
+    "month": 11,
+    "year": 2025,
+    "day": 19
+  },
+  {
+    "id": 4,
+    "full_name": "Hamidulloh",
+    "login": "hamidulloh",
+    "password": "qwerty",
+    "city": "ewe",
+    "region": "qwqw",
+    "role": "user",
+    "month": 11,
+    "year": 2025,
+    "day": 20
+  },
+  {
+    "id": 5,
+    "full_name": "asas",
+    "login": "asa",
+    "password": "asas",
+    "city": "q",
+    "region": "a",
+    "role": "user",
+    "month": 11,
+    "year": 2025,
+    "day": 20
+  }
+]
