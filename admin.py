@@ -11,14 +11,12 @@ def admin_menu():
     clear_console()
     print(colored("\n🔐 ADMIN KIRISH\n", "green", attrs=["bold"]))
     login = input(colored("Login: ", "cyan"))
-    parol = input(colored("Parol: ", "cyan"))
+    password = input(colored("Parol: ", "cyan"))
 
     users = get_data(USER_FILE)
     admin = None
     for user in users:
-        if user['login'] == login\
-            and user['password'] == parol\
-                and user.get('role') == 'admin':
+        if user['login'] == login and user['password'] == password and user.get('role') == 'admin':
             admin = user
             break
 
@@ -122,8 +120,7 @@ def clubs_list():
 
     print(colored("\n=== KLUBLAR ===", "cyan"))
     for c in clubs:
-        print(
-            f"{c['id']}. {c['name']} - {c['city']}, {c['region']} ({c['category']})")
+        print(f"{c['id']}. {c['name']} - {c['city']}, {c['region']} ({c['category']})")
 
 
 def add_club():
@@ -133,10 +130,10 @@ def add_club():
     city = input(colored("Shahar: ", "cyan"))
     region = input(colored("Tuman: ", "cyan"))
 
-    print(colored("\nKategoriya:", "yellow"))
+    print(colored("\nKategoriya:\n", "yellow"))
     print(colored("1. Suzish zal", "green"))
     print(colored("2. Trenajyor", "green"))
-    print(colored("3. Ot minish", "green"))
+    print(colored("3. Ot minish\n", "green"))
 
     category_choice = input(colored("Tanlang: ", "green"))
     category = {

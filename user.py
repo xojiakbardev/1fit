@@ -38,11 +38,19 @@ def register_user():
     parol = input(colored("Parol: ", "yellow"))
     shahar = input(colored("Shahar: ", "yellow"))
     tuman = input(colored("Tuman: ", "yellow"))
+    gender = input(
+        colored("Jinsingizni tanlang \n1. Erkak\n2. Ayol\nTanlang: ", "yellow"))
+    height = input(colored("Bo'yingizni kiriting: ", "yellow"))
+    weight = input(colored("Vazningizni kiriting: ", "yellow"))
+    age = input(colored("Yoshingizni kiriting: ", "yellow"))
 
     if any(uuser['login'] == login for uuser in users):
         clear_console()
         print(colored("❌ Bu login band!", "red"))
         return
+
+    gender = "erkak" if gender == "1" else "ayol"
+    bmi = int(weight) / (int(height) / 100) ** 2
 
     new_user = {
         'id': get_new_id(users),
@@ -50,6 +58,11 @@ def register_user():
         'login': login,
         'password': parol,
         'city': shahar,
+        'height': height,
+        'weight': weight,
+        'age': age,
+        'bmi': bmi,
+        'gender': gender,
         'region': tuman,
         'role': 'user',
         'month': datetime.now().month,
@@ -93,7 +106,8 @@ def user_panel(user):
         print(colored("1. Barcha klublar", "green"))
         print(colored("2. Tavsiya qilingan klublar", "green"))
         print(colored("3. Klublarga obuna bo'lish", "green"))
-        print(colored("4. Orqaga", "yellow"))
+        print(colored("4. BMI ni ko'rish", "green"))
+        print(colored("5. Orqaga", "yellow"))
 
         choice = input(colored("\nTanlang: ", "green"))
 
@@ -108,7 +122,26 @@ def user_panel(user):
                 clear_console()
                 subscribe(user)
             case "4":
-                break
+                clear_console()
+                get_bmi(user)
+            case "5":
+                return
+
+
+def get_bmi(user):
+    statistic = [
+        {"min": 0, "max": 18.4, "status": "Kam vazn"},
+        {"min": 18.5, "max": 24.9, "status": "Normal"},
+        {"min": 25, "max": 29.9, "status": "Ideal"},
+        {"min": 30, "max": 100, "status": "Ortiqcha vazn"}
+    ]
+    user_status = "Normal"
+    for s in statistic:
+        if user["bmi"] >= s["min"] and user["bmi"] <= s["max"]:
+            user_status = s["status"]
+            break
+    print(
+        colored(f"\n📋 Sizning BMI holatingiz {user.get("bmi")}\nUshbu holat {user_status}", "yellow"))
 
 
 def clubs():
@@ -127,8 +160,8 @@ def clubs():
 def recommended_clubs(user):
     clubs = get_data(CLUB_FILE)
 
-    tavsiya = [c for c in clubs if c['city'] ==
-               user['city'] and c['region'] == user['region']]
+    tavsiya = [c for c in clubs if c['city'].lower() ==
+               user['city'].lower() and c['region'].lower() == user['region'].lower()]
 
     if not tavsiya:
         print(

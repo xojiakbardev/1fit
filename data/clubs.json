@@ -1,9 +1,16 @@
 [
   {
     "id": 1,
-    "nomi": "A.A.A",
+    "name": "A.A.A",
     "city": "Toshkent",
     "region": "Sergili",
-    "kategoriya": "suzish"
+    "category": "suzish"
+  },
+  {
+    "id": 2,
+    "name": "Startsa",
+    "city": "Toshkent",
+    "region": "Sergili",
+    "category": "suzish"
   }
 ]

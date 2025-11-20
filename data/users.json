@@ -1,57 +1,43 @@
 [
   {
     "id": 1,
-    "full_name": "Abduboriy Abdusamadov",
-    "login": "abduboriy",
-    "password": "qwerty",
-    "role": "admin"
-  },
-  {
-    "id": 2,
-    "full_name": "Nasriddinov Xojiakbar",
+    "full_name": "Xojiakbar Nasriddinov",
     "login": "xojiakbar",
     "password": "qwerty",
     "city": "Toshkent",
+    "height": "175",
+    "weight": "70",
+    "age": "19",
+    "bmi": 22.857142857142858,
+    "gender": "erkak",
     "region": "Sergili",
     "role": "user",
     "month": 11,
     "year": 2025,
-    "day": 19
+    "day": 20
+  },
+  {
+    "id": 2,
+    "full_name": "Muhammad Hamidullayev",
+    "login": "muhammad",
+    "password": "qwerty",
+    "city": "Toshkent",
+    "height": "177",
+    "weight": "62",
+    "age": "19",
+    "bmi": 19.789970953429727,
+    "gender": "erkak",
+    "region": "Sergili",
+    "role": "user",
+    "month": 11,
+    "year": 2025,
+    "day": 20
   },
   {
     "id": 3,
-    "full_name": "Ummataliyev Anasxon",
-    "login": "anasxon",
+    "full_name": "Startsa",
+    "login": "startsa",
     "password": "qwerty",
-    "city": "Toshkent",
-    "region": "Sergili",
-    "role": "user",
-    "month": 11,
-    "year": 2025,
-    "day": 19
-  },
-  {
-    "id": 4,
-    "full_name": "Hamidulloh",
-    "login": "hamidulloh",
-    "password": "qwerty",
-    "city": "ewe",
-    "region": "qwqw",
-    "role": "user",
-    "month": 11,
-    "year": 2025,
-    "day": 20
-  },
-  {
-    "id": 5,
-    "full_name": "asas",
-    "login": "asa",
-    "password": "asas",
-    "city": "q",
-    "region": "a",
-    "role": "user",
-    "month": 11,
-    "year": 2025,
-    "day": 20
+    "role": "admin"
   }
 ]
